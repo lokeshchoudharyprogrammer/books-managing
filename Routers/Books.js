@@ -63,6 +63,7 @@ booksRouter.put('/books/:id', async (req, res) => {
 });
 
 booksRouter.delete('/books/:id', async (req, res) => {
+    
     try {
         const book = await BookModel.findByIdAndRemove(req.params.id);
         if (book) {
